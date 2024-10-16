@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paula's Choice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        .container h2 {
+            text-align: center;
+            font-size: 30px;
+            color: #140303;
+            margin-bottom: 20px;
+        }
+
+        .promo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Hiển thị 4 cột */
+            gap: 20px;
+        }
+
+        .promo-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .promo-item img {
+            width: 100%;
+    height: 200px; /* Đặt chiều cao cố định */
+    object-fit: cover;
+        }
+
+        .promo-item h3 {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #140303;
+           
+        }
+
+        .promo-item .price {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .promo-item .price-original {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .promo-item .price-discount {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .promo-item a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .promo-item a:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                  
+                  <!-- Icon Twitter -->
+                  <a href="https://www.twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  
+                  <!-- Icon Instagram -->
+                  <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.tiktok.com" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                  </a>
+            </div>
+        </div>
+        <div class="header-main">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo" class="logo">
+            </a>
+            <input type="text" placeholder="Tìm kiếm sản phẩm">
+            <div class="navbar">
+              <a href="#" class="account">
+                  <i class="fas fa-user"></i> Tài khoản
+              </a>
+              <a href="#" class="cart">
+                  <i class="fas fa-shopping-cart"></i> Giỏ hàng (0)
+              </a>
+          </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="menu">
+            <li><a href="product.html">Sản Phẩm</a>
+              <!-- Submenu thả xuống -->
+              <div class="submenu">
+                <ul>
+                  <!-- Cột 1: Sản phẩm chăm sóc da -->
+                  <li>
+                    <h3>Sản Phẩm Chăm Sóc Da</h3>
+                    <a href="#">Sữa rửa mặt và tẩy trang</a>
+                    <a href="#">Toner</a>
+                    <a href="#">Loại bỏ tế bào chết</a>
+                    <a href="#">Tinh chất cải thiện</a>
+                    <a href="#">Kem dưỡng ẩm</a>
+                    <a href="#">Kem chống nắng và dưỡng ngày</a>
+                    <a href="#">Sản phẩm cho cơ thể</a>
+                    <a href="#">Trang điểm</a>
+                    <a href="#">Kem mắt</a>
+                    <a href="#">Chăm sóc môi</a>
+                  </li>
+                  <!-- Cột 2: Sản phẩm theo thành phần -->
+                  <li>
+                    <h3>Sản Phẩm Theo Thành Phần</h3>
+                    <a href="#">AHA</a>
+                    <a href="#">BHA</a>
+                    <a href="#">Bakuchiol</a>
+                    <a href="#">Ceramide</a>
+                    <a href="#">Hyaluronic Acid</a>
+                    <a href="#">Niacinamide</a>
+                    <a href="#">Omega</a>
+                    <a href="#">Peptide</a>
+                    <a href="#">Retinol</a>
+                    <a href="#">Vitamin C</a>
+                    <a href="#">Phytoestrogen</a>
+                    <a href="#">Tranexamic Acid</a>
+                  </li>
+                  <!-- Cột 3: Loại da và vấn đề da -->
+                  <li>
+                    <h3>Loại Da</h3>
+                    <a href="#">Da dầu</a>
+                    <a href="#">Da hỗn hợp</a>
+                    <a href="#">Da khô</a>
+                    <a href="#">Da nhạy cảm</a>
+                    <a href="#">Da thường</a>
+                    </li>
+                    <li>
+                    <h3>Vấn Đề Trên Da</h3>
+                    <a href="#">Chăm sóc da toàn thân</a>
+                    <a href="#">Da khô - Mất nước</a>
+                    <a href="#">Da không đều màu</a>
+                    <a href="#">Da lão hóa - Nếp nhăn</a>
+                    <a href="#">Lỗ chân lông to</a>
+                    <a href="#">Nám - Tàn nhang</a>
+                    <a href="#">Trị mụn</a>
+                </li>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+                <a href="ingredient.html">Thành Phần</a>
+                <!-- Menu thả xuống -->
+                <div class="dropdown">
+                  <div class="grid-2-columns">
+                    <ul>
+                      <li>Tra cứu thành phần</li>
+                      <li>BHA</li>
+                      <li>Benzoyl Peroxide</li>
+                      <li>Hyaluronic acid (HA)</li>
+                      <li>Niacinamide</li>
+                      <li>Retinol</li>
+                      <li>Tranexamic acid</li>
+                    </ul>
+                    <ul>
+                      <li>AHA</li>
+                      <li>Bakuchiol</li>
+                      <li>Ceramide</li>
+                      <li>Peptide</li>
+                      <li>Omega</li>
+                      <li>Vitamin C</li>
+                      <li>Phytoestrogen</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="skincare.html">Kiến Thức Chăm Sóc Da</a>
+                <!-- Menu thả xuống cho Kiến Thức Chăm Sóc Da -->
+                <div class="dropdown">
+                  <div class="grid-2-columns">
+                    <ul>
+                      <li>Làm sạch da</li>
+                      <li>Tinh chất dưỡng da và serum</li>
+                      <li>Toner và cách sử dụng</li>
+                      <li>Dưỡng ẩm cho da</li>
+                      <li>Cách chống nắng cho làn da</li>
+                      <li>Nám da mặt và tàn nhang</li>
+                      <li>Da lỗ chân lông to</li>
+                      <li>40 lầm tưởng về làm đẹp</li>
+                    </ul>
+                    <ul>
+                      <li>Lời khuyên chuyên gia</li>
+                      <li>Các lời đồn và sự thật</li>
+                      <li>Chăm sóc da dầu</li>
+                      <li>Chăm sóc da nhạy cảm</li>
+                      <li>Chăm sóc da mụn</li>
+                      <li>Chăm sóc da khô</li>
+                      <li>Chăm sóc da lão hóa</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            
+            <li><a href="news.html">Tin Tức</a></li>
+            <li><a href="promotion.html">Khuyến Mại</a></li>
+            <li><a href="contact.html">Liên Hệ</a></li>
+          </ul>
+        
+    </nav>
+
+ 
+    <div class="container">
+        <h2>ƯU ĐÃI ĐẶC BIỆT</h2>
+        <div class="promo-grid">
+            <!-- Sản phẩm khuyến mãi 1 -->
+            <div class="promo-item">
+                <img src="https://cdn.chanhtuoi.com/uploads/2024/04/sua-rua-mat-duong-am-hada-labo-1.jpg.webp" alt="Sản phẩm 1">
+                <h3>Sữa rửa mặt dưỡng ẩm</h3>
+                <p class="price">
+                    <span class="price-original">400,000đ</span> <span class="price-discount">300,000đ</span>
+                </p>
+                <a href="#">Mua Ngay</a>
+            </div>
+
+            <!-- Sản phẩm khuyến mãi 2 -->
+            <div class="promo-item">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.N7F6hW9OWs_anTGprlF38wHaHa&pid=Api&P=0&h=180" alt="Sản phẩm 2">
+                <h3>Kem chống nắng SPF50</h3>
+                <p class="price">
+                    <span class="price-original">500,000đ</span> <span class="price-discount">350,000đ</span>
+                </p>
+                <a href="#">Mua Ngay</a>
+            </div>
+
+            <!-- Sản phẩm khuyến mãi 3 -->
+            <div class="promo-item">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.RDyFYNZ8HTqqUVqGarPljAHaHa&pid=Api&P=0&h=180" alt="Sản phẩm 3">
+                <h3>Tinh chất dưỡng da </h3>
+                <p class="price">
+                    <span class="price-original">1,200,000đ</span> <span class="price-discount">950,000đ</span>
+                </p>
+                <a href="#">Mua Ngay</a>
+            </div>
+
+            <!-- Sản phẩm khuyến mãi 4 -->
+            <div class="promo-item">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.6Yho5uV5IJo4tNXMp5nxIQHaHa&pid=Api&P=0&h=180" alt="Sản phẩm 4">
+                <h3>Serum chống lão hóa</h3>
+                <p class="price">
+                    <span class="price-original">900,000đ</span> <span class="price-discount">700,000đ</span>
+                </p>
+                <a href="#">Mua Ngay</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer.html -->
+    <footer class="footer">
+        <div class="container">
+            <!-- PAULA'S CHOICE -->
+            <div class="column">
+                <h3>HANNAH'S BEAUTY HAVEN</h3>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Triết lý Hannah's Beauty Haven</a></li>
+                    <li><a href="#">Lịch sử Thương Hiệu</a></li>
+                    <li><a href="#">Hệ thống Showroom</a></li>
+                    <li><a href="#">Hệ thống đối tác ủy quyền</a></li>
+                    <li><a href="#">Nhà sáng lập Hannah's Beauty Haven</a></li>
+                    <li>1900 6409 - 0973 78 2001</li>
+                </ul>
+            </div>
+    
+            <!-- HỖ TRỢ KHÁCH HÀNG -->
+            <div class="column">
+                <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+                <div class="subscribe">
+                    <input type="email" placeholder="Nhập email để theo dõi ưu đãi">
+                    <button>GỬI NGAY</button>
+                </div>
+                <ul>
+                    <li><a href="#">Chính sách bảo mật & bảo vệ thông tin cá nhân người tiêu dùng</a></li>
+                    <li><a href="#">Chính sách kiểm hàng</a></li>
+                    <li><a href="#">Chính sách chung</a></li>
+                    <li><a href="#">Các hình thức đặt hàng & thanh toán</a></li>
+                </ul>
+            </div>
+    
+            <!-- HỆ THỐNG SHOWROOM -->
+            <div class="column">
+                <h3>HỆ THỐNG SHOWROOM</h3>
+                <ul>
+                    <li><strong>Đà Nẵng</strong></li>
+                    <li>Tầng 2 Lotte Department Store, 54 Hòa Khánh Bắc, Liên Chiểu, Đà Nẵng</li>
+                    <li>Hotline: 0962.528.698</li>
+                    <li><strong>Hồ Chí Minh</strong></li>
+                    <li>B1 TTTM – Takashimaya Việt Nam – Saigon Centre, 92 – 94 Nam Kỳ Khởi Nghĩa, Quận 1, TP.HCM</li>
+                    <li>Hotline: 0968.56.52.50</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

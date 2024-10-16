@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paula's Choice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      .news-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-item {
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-item img {
+  width: 100%;
+    height: 200px; /* Đặt chiều cao cố định */
+    object-fit: cover;
+}
+
+.news-item h3 {
+    margin: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.news-item p {
+    margin: 15px;
+    color: #777;
+}
+
+.news-item a {
+    color: #d35400;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                  
+                  <!-- Icon Twitter -->
+                  <a href="https://www.twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  
+                  <!-- Icon Instagram -->
+                  <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.tiktok.com" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                  </a>
+            </div>
+        </div>
+        <div class="header-main">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo" class="logo">
+            </a>
+            <input type="text" placeholder="Tìm kiếm sản phẩm">
+            <div class="navbar">
+              <a href="#" class="account">
+                  <i class="fas fa-user"></i> Tài khoản
+              </a>
+              <a href="#" class="cart">
+                  <i class="fas fa-shopping-cart"></i> Giỏ hàng (0)
+              </a>
+          </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="menu">
+            <li><a href="product.html">Sản Phẩm</a>
+              <!-- Submenu thả xuống -->
+              <div class="submenu">
+                <ul>
+                  <!-- Cột 1: Sản phẩm chăm sóc da -->
+                  <li>
+                    <h3>Sản Phẩm Chăm Sóc Da</h3>
+                    <a href="#">Sữa rửa mặt và tẩy trang</a>
+                    <a href="#">Toner</a>
+                    <a href="#">Loại bỏ tế bào chết</a>
+                    <a href="#">Tinh chất cải thiện</a>
+                    <a href="#">Kem dưỡng ẩm</a>
+                    <a href="#">Kem chống nắng và dưỡng ngày</a>
+                    <a href="#">Sản phẩm cho cơ thể</a>
+                    <a href="#">Trang điểm</a>
+                    <a href="#">Kem mắt</a>
+                    <a href="#">Chăm sóc môi</a>
+                  </li>
+                  <!-- Cột 2: Sản phẩm theo thành phần -->
+                  <li>
+                    <h3>Sản Phẩm Theo Thành Phần</h3>
+                    <a href="#">AHA</a>
+                    <a href="#">BHA</a>
+                    <a href="#">Bakuchiol</a>
+                    <a href="#">Ceramide</a>
+                    <a href="#">Hyaluronic Acid</a>
+                    <a href="#">Niacinamide</a>
+                    <a href="#">Omega</a>
+                    <a href="#">Peptide</a>
+                    <a href="#">Retinol</a>
+                    <a href="#">Vitamin C</a>
+                    <a href="#">Phytoestrogen</a>
+                    <a href="#">Tranexamic Acid</a>
+                  </li>
+                  <!-- Cột 3: Loại da và vấn đề da -->
+                  <li>
+                    <h3>Loại Da</h3>
+                    <a href="#">Da dầu</a>
+                    <a href="#">Da hỗn hợp</a>
+                    <a href="#">Da khô</a>
+                    <a href="#">Da nhạy cảm</a>
+                    <a href="#">Da thường</a>
+                    </li>
+                    <li>
+                    <h3>Vấn Đề Trên Da</h3>
+                    <a href="#">Chăm sóc da toàn thân</a>
+                    <a href="#">Da khô - Mất nước</a>
+                    <a href="#">Da không đều màu</a>
+                    <a href="#">Da lão hóa - Nếp nhăn</a>
+                    <a href="#">Lỗ chân lông to</a>
+                    <a href="#">Nám - Tàn nhang</a>
+                    <a href="#">Trị mụn</a>
+                </li>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+                <a href="ingredient.html">Thành Phần</a>
+                <!-- Menu thả xuống -->
+                <div class="dropdown">
+                  <div class="grid-2-columns">
+                    <ul>
+                      <li>Tra cứu thành phần</li>
+                      <li>BHA</li>
+                      <li>Benzoyl Peroxide</li>
+                      <li>Hyaluronic acid (HA)</li>
+                      <li>Niacinamide</li>
+                      <li>Retinol</li>
+                      <li>Tranexamic acid</li>
+                    </ul>
+                    <ul>
+                      <li>AHA</li>
+                      <li>Bakuchiol</li>
+                      <li>Ceramide</li>
+                      <li>Peptide</li>
+                      <li>Omega</li>
+                      <li>Vitamin C</li>
+                      <li>Phytoestrogen</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="skincare.html">Kiến Thức Chăm Sóc Da</a>
+                <!-- Menu thả xuống cho Kiến Thức Chăm Sóc Da -->
+                <div class="dropdown">
+                  <div class="grid-2-columns">
+                    <ul>
+                      <li>Làm sạch da</li>
+                      <li>Tinh chất dưỡng da và serum</li>
+                      <li>Toner và cách sử dụng</li>
+                      <li>Dưỡng ẩm cho da</li>
+                      <li>Cách chống nắng cho làn da</li>
+                      <li>Nám da mặt và tàn nhang</li>
+                      <li>Da lỗ chân lông to</li>
+                      <li>40 lầm tưởng về làm đẹp</li>
+                    </ul>
+                    <ul>
+                      <li>Lời khuyên chuyên gia</li>
+                      <li>Các lời đồn và sự thật</li>
+                      <li>Chăm sóc da dầu</li>
+                      <li>Chăm sóc da nhạy cảm</li>
+                      <li>Chăm sóc da mụn</li>
+                      <li>Chăm sóc da khô</li>
+                      <li>Chăm sóc da lão hóa</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            
+            <li><a href="news.html">Tin Tức</a></li>
+            <li><a href="promotion.html">Khuyến Mại</a></li>
+            <li><a href="contact.html">Liên Hệ</a></li>
+          </ul>
+        
+    </nav>
+
+   
+    <section class="news-section">
+        <h2>TIN TỨC MỚI VỀ MỸ PHẨM</h2>
+        <div class="news-grid">
+            <!-- Bài viết 1 -->
+            <article class="news-item">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.QC7ykquyDJNascTHYHBEWwHaEo&pid=Api&P=0&h=180" alt="Bí quyết chăm sóc da">
+                <h3><a href="https://r.search.yahoo.com/_ylt=Awr1TXe6xQtnDQIAR0prUwx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1730034363/RO=10/RU=https%3a%2f%2fwww.bioderma.com.vn%2fthau-hieu-lan-da%2fda-kho-den-di-ung%2fda-kho-den-rat-kho%2f12-bi-quyet-cham-soc-da-mua-dong-ma-nang-nen-biet/RK=2/RS=3NR469zIb7nVgCsqcJenuGUs7nk-">Bí quyết chăm sóc da vào mùa đông</a></h3>
+                <p>Da khô vào mùa đông có thể là vấn đề, hãy cùng khám phá các sản phẩm dưỡng ẩm hiệu quả giúp da bạn luôn mềm mại.</p>
+            </article>
+            
+            <!-- Bài viết 2 -->
+            <article class="news-item">
+                <img src="https://image.phunuonline.com.vn/fckeditor/upload/2024/20240121/images/xu-huong-son-bong-noi-bat-_461705820903.jpg" alt="Xu hướng son môi 2024">
+                <h3><a href="https://r.search.yahoo.com/_ylt=Awr1UZIaxgtnjQIAz2FrUwx.;_ylu=Y29sbwNzZzMEcG9zAzcEdnRpZAMEc2VjA3Ny/RV=2/RE=1730034459/RO=10/RU=https%3a%2f%2fwww.phunuonline.com.vn%2fxu-huong-son-bong-noi-bat-nhat-nam-2024-a1510499.html/RK=2/RS=4ZHQhQ64KFZdUAW40WG6Ue6zALk-">Xu hướng son môi 2024: Màu sắc và phong cách</a></h3>
+                <p>Khám phá những màu son môi đang gây bão trong năm 2024 và cách kết hợp chúng với phong cách trang điểm hiện đại.</p>
+            </article>
+            
+            <!-- Bài viết 3 -->
+            <article class="news-item">
+                <img src="https://file.hstatic.net/200000656877/article/top-5-bo-san-pham-chong-lao-hoa-hieu-qua-hot-nhat-hien-nay-thumb_fc0b61e9f9644d8f9459867031a01413_1024x1024.jpg" alt="Sản phẩm chống lão hóa">
+                <h3><a href="https://r.search.yahoo.com/_ylt=AwrKDvxfxgtnDwIAvzZrUwx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1730034527/RO=10/RU=https%3a%2f%2fblissberry.vn%2fblogs%2freview-san-pham%2ftop-5-bo-san-pham-chong-lao-hoa-hieu-qua-hot-nhat-hien-nay/RK=2/RS=5Ja9fW8FPum_6MYyOwO7Uf6_NCo-">Top 5 sản phẩm chống lão hóa hiệu quả nhất</a></h3>
+                <p>Chống lão hóa là mối quan tâm của nhiều chị em phụ nữ. Hãy cùng xem qua những sản phẩm được đánh giá cao trong việc chống lão hóa da.</p>
+            </article>
+
+          
+    </section>
+
+    <!-- footer.html -->
+    <footer class="footer">
+      <div class="container">
+          <!-- PAULA'S CHOICE -->
+          <div class="column">
+              <h3>HANNAH'S BEAUTY HAVEN</h3>
+              <ul>
+                  <li><a href="#">Giới thiệu</a></li>
+                  <li><a href="#">Triết lý Hannah's Beauty Haven</a></li>
+                  <li><a href="#">Lịch sử Thương Hiệu</a></li>
+                  <li><a href="#">Hệ thống Showroom</a></li>
+                  <li><a href="#">Hệ thống đối tác ủy quyền</a></li>
+                  <li><a href="#">Nhà sáng lập Hannah's Beauty Haven</a></li>
+                  <li>1900 6409 - 0973 78 2001</li>
+              </ul>
+          </div>
+  
+          <!-- HỖ TRỢ KHÁCH HÀNG -->
+          <div class="column">
+              <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+              <div class="subscribe">
+                  <input type="email" placeholder="Nhập email để theo dõi ưu đãi">
+                  <button>GỬI NGAY</button>
+              </div>
+              <ul>
+                  <li><a href="#">Chính sách bảo mật & bảo vệ thông tin cá nhân người tiêu dùng</a></li>
+                  <li><a href="#">Chính sách kiểm hàng</a></li>
+                  <li><a href="#">Chính sách chung</a></li>
+                  <li><a href="#">Các hình thức đặt hàng & thanh toán</a></li>
+              </ul>
+          </div>
+  
+          <!-- HỆ THỐNG SHOWROOM -->
+          <div class="column">
+              <h3>HỆ THỐNG SHOWROOM</h3>
+              <ul>
+                  <li><strong>Đà Nẵng</strong></li>
+                  <li>Tầng 2 Lotte Department Store, 54 Hòa Khánh Bắc, Liên Chiểu, Đà Nẵng</li>
+                  <li>Hotline: 0962.528.698</li>
+                  <li><strong>Hồ Chí Minh</strong></li>
+                  <li>B1 TTTM – Takashimaya Việt Nam – Saigon Centre, 92 – 94 Nam Kỳ Khởi Nghĩa, Quận 1, TP.HCM</li>
+                  <li>Hotline: 0968.56.52.50</li>
+              </ul>
+          </div>
+      </div>
+  </footer>
+  
+</body>
+</html>
